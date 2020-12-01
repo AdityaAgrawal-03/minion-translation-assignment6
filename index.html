@@ -5,17 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minion Speak</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/minion.ico">
 </head>
 <body>
-  <h1>Minion Speak Translator</h1>
+
+  <nav class="navigation">
+    <div class="nav-brand">
+      <h1>Minion Speak</h1>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="container">
+      <textarea id="input-text" placeholder="type your text in english"></textarea>
+      <textarea id="translated-text" placeholder="hit the button to see minion language"></textarea>
+      <button id="btn-translate">Translate</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <h2>Convert from English to Minion speak. This language is spoken by the minions in Despicable Me. The language is actually lots of languages. Yi kai yai yai bananna! Minion is a registered trademark of Universal Studios.</h2>
+    <p class="p-note">*Ratelimit of API calls is 60 per day with distribution of 5 per hour.</p>
+  </footer>
   
-  <textarea id="input-text" placeholder="type your text"></textarea>
-  <br>
-  <button id="btn-translate">Translate</button>
-
-  <h1>Translated text</h1>
-
-  <textarea id="translated-text" placeholder="hit the button to see minion language"></textarea>
   <script src="/app.js"></script>
 </body>
 </html>
