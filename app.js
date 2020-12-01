@@ -17,8 +17,10 @@ function clickHandler() {
   // addTextParameterToURL(textParameter);
   // console.log(url)
 
+ 
+
   if (textParameter.length === 0) {
-    alert("you need to write a sentence") 
+    alert("you need to write a sentence")
   }
 
   fetch(addTextParameterToURL(textParameter))
