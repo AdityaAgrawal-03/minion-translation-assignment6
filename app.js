@@ -3,18 +3,14 @@ var inputText = document.getElementById('input-text');
 var translatedText = document.getElementById('translated-text');
 
 var url = "https://api.funtranslations.com/translate/minion.json";
-var status;
+
 
 // construct URL
 function addTextParameterToURL(textParameter) {
   return `${url}?text=${textParameter}`;
 }
 
-// function errorHandler(error, errorStatus) {
-  
-//   alert("Ooops! something went wrong")
-// }
-
+// click handler function
 function clickHandler() {
   var textParameter = inputText.value;
   
