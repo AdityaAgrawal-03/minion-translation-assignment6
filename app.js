@@ -2,28 +2,37 @@ var btnTranslate = document.getElementById('btn-translate');
 var inputText = document.getElementById('input-text');
 var translatedText = document.getElementById('translated-text');
 
-var url = "https://api.funtranslations.com/translate/minion.json?text=";
+var url = "https://api.funtranslations.com/translate/minion.json";
+var status;
 
-// add text parameter to url
-function addTextToURL(inputTxt) {
-  url = url + inputTxt;
-  return url;
-  
+// construct URL
+function addTextParameterToURL(textParameter) {
+  return `${url}?text=${textParameter}`;
 }
 
+// function errorHandler(error, errorStatus) {
+  
+//   alert("Ooops! something went wrong")
+// }
 
 function clickHandler() {
-  var inputTxt = inputText.value;
-  addTextToURL(inputTxt);
-
+  var textParameter = inputText.value;
+  
+  // addTextParameterToURL(textParameter);
   // console.log(url)
-  // console.log(inputTxt)
 
-  fetch(url)
+  if (textParameter.length === 0) {
+    alert("you need to write a sentence") 
+  }
+
+  fetch(addTextParameterToURL(textParameter))
   .then(response => response.json())
-  .then(json => translatedText.value = json.contents.translated);
-
-
+  .then(json => {
+    translatedText.innerText = json.contents.translated;
+  })
+  .catch(error => {
+    console.log('error occured', error);
+  })
 }
 
 btnTranslate.addEventListener('click', clickHandler);
