@@ -15,3 +15,4 @@
 * Rate of calling the api 5 per hour.
 
 ### Demo
+![Screenshot of webiste](https://github.com/AdityaAgrawal-03/minion-translation-assignment6/blob/master/demo/demo.png)
