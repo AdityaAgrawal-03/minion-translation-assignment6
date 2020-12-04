@@ -22,11 +22,15 @@ body {
   font-size: var(--nav-font-size);
 }
 
-/* .container {
-  display: block;
-  width: 50%;
-  margin: auto;
-} */
+.nav-heading {
+  display: flex;
+  justify-content: center;
+}
+
+.minion-svg {
+  height: 100px;
+  margin-top: 0.5rem;
+}
 
 .container {
   margin: 2rem;
@@ -36,13 +40,11 @@ body {
 }
 
 textarea {
-  /* width: 70vw;
-  height: 200px; */
   font-family: inherit;
   font-size: 30px;
   padding: 1rem;
-  outline: none;
   margin: 1rem;
+  outline: none;
   resize: none;
 }
 
@@ -56,12 +58,13 @@ button {
   font-family: inherit;
   font-size: 30px;
   cursor: pointer;
-  
 }
 
 button:hover {
-  transform: scale(0.9);
+  transform: scale(0.98);
 }
+
+/* footer */
 
 .footer {
   background-color: var(--primary-color);
@@ -74,4 +77,18 @@ button:hover {
 .p-note {
   font-weight: bold;
   font-size: 18px;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+
+  body {
+    width: 100vw;
+  }
+
+  .minion-svg {
+    height: 100px;
+    margin-top: 2rem;
+  }
 }
