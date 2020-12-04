@@ -1,5 +1,5 @@
 # Minion Translator App
-#### A language translator web app which converts english text to minion text by calling an API.
+#### A language translator web app which converts english text to minion text by fetching an API.
 
 ### Technology
 * HTML5
